@@ -16,29 +16,32 @@
     <input type="number" id="secondnum">
 <br><br>
 
-<!-- <div id="opt">
-    <button>add</button>
-    <button>subt</button>
-    <button>multi</button>
-    <button>divide</button> -->
-    <button id="add" onclick="clicked(firstnum,secondnum)">Add</button>
-    <button id="subt">Subtract</button>
-    <button id="multi">multiply</button>
-    <button id="divide">divide</button>
-<!-- </div> -->
-   
+    <button id="add" onclick="sumofnum()">Add</button>
+    <button id="subt" onclick="Subtract()">Subtract</button>
+    <button id="multi" onclick="multiofnum()">multiply</button>
+    <button id="divide" onclick="divideofnum()">divide</button>
+
 </body>
 </html>
 <script>
-    let sum = document.getElementById("add")
-function clicked(a,b){
-switch(add)
-case "Add"
-    alert(number(firstnum)+number(secondnum))
-}
-    let firstnum = document.getElementById("firstnum")
 
-    let secondnum = document.getElementById("secondnum")
+    let inp1 = document.getElementById('firstnum')
+    let inp2 = document.getElementById('secondnum')
 
+    function sumofnum(){
+       alert(Number(inp1.value)+Number(inp2.value)) 
+    }
+
+    function Subtract(){
+       alert(Number(inp1.value)-Number(inp2.value)) 
+    }
+
+    function multiofnum(){
+       alert(Number(inp1.value)*Number(inp2.value)) 
+    }
+
+    function divideofnum(){
+       alert(Number(inp1.value)/Number(inp2.value)) 
+    }
 
 </script>
