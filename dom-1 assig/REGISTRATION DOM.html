@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>registration dom</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>registration dom</title>
 </head>
+
 <body>
 	<input type="text" name="name" id="name">
 	<select id="gender">
@@ -26,32 +28,53 @@
 	<button onclick="showMobile()">MOBILE</button>
 	<button onclick="resetForm()">RESET FORM</button>
 	<button onclick="resetDisplay()">RESET DISPLAY</button>
-	<script >
-        let inp1 = document.getElementById("name")
-        let displayname = document.getElementById("dname")
+	<script>
+
+		let inp1 = document.getElementById("name")
+		let displayname = document.getElementById("dName")
+
+		let inp2 = document.getElementById("gender")
+		let displaygender = document.getElementById("dGender")
+
+		let inp3 = document.getElementById("email")
+		let displayemail = document.getElementById("dEmail")
+
+		let inp4 = document.getElementById("mobile")
+		let displaymobile = document.getElementById("dMobile")
+
 		function showName() {
 			displayname.innerText = inp1.value
-            console.log(displayname.innerText)
 		}
 
 		function showGender() {
 			// Show the selected gender inside h2
+			displaygender.innerText = inp2.value
 		}
 
 		function showEmail() {
 			// Show the filled email inside h3
+			displayemail.innerText = inp3.value
 		}
 
 		function showMobile() {
 			// Show the filled mobile inside h4
+			displaymobile.innerText = inp4.value
 		}
 
 		function resetForm() {
 			// Reset all the form elements to default values (blank "")
+			inp1.value = ""
+			inp2.value = ""
+			inp3.value = ""
+			inp4.value = ""
 		}
 
 		function resetDisplay() {
 			// Reset all the headings (h1, h2, h3, h4) to blank values
+			displayname.innerText = "NAME";
+			displaygender.innerText = "GENDER";
+			displayemail.innerText = "EMAIL";
+			displaymobile.innerText = "MOBILE";
 		}
 	</script>
 
